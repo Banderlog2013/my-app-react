@@ -30,14 +30,6 @@ class App extends Component {
     }
 
     addItem = (name, salary) => { // создаем метод с аргументами
-        // const newItem = { // создаем новую переменную в виде объекта
-        //     name, 
-        //     salary,
-        //     increase: false, // инкрис устанавливаем в фолс
-        //     rise: false,
-        //     id: this.maxId++ // присваиваем id на единицу больше
-        // }
-        
         const newItem = { // создаем новую переменную в виде объекта
             name, 
             salary,
@@ -54,38 +46,6 @@ class App extends Component {
             }
         });
     }
-
-    // onToggleIncrease = (id) => { // изменяет инкрис на противоположный
-    //     // this.setState(({data}) => { // получаем состояние
-    //     //     const index = data.findIndex(elem => elem.id === id); // получаем индекс
-        
-    //     //     const old = data[index]; // переменная со старым массивом
-    //     //     const newItem = {...old, increase: !old.icrease}; // создаем новый элемет старый массив со свойствами
-    //     //     const newArr = [...data.slice(0, index), newItem, data.slice(index +1)]; // новый массив с добавлением нового элемента и присваиванием индекса
-        
-    //     //     return {
-    //     //         data: newArr
-    //     //     } // возвращаем новый массив
-    //     this.setState(({data}) => ({ // возращаем новый объект у которогт свойства дата 
-    //         data:data.map(item => { // мап возвращает новый массив
-    //             if (item.id === id) { // если совпал айди, то нашли нужный объект
-    //                 return {...item, increase: !item.increase} // то возращается развернутые элементы и изменным инкрис
-    //             }
-    //             return item; // если не совпало то возращаем объект
-    //         })
-    //     }))
-    // }
-
-    // onToggleRise = (id) => { // изменяет инкрис на противоположный с другим свойством
-    //     this.setState(({data}) => ({ // возращаем новый объект у которогт свойства дата 
-    //         data:data.map(item => { // мап возвращает новый массив
-    //             if (item.id === id) { // если совпал айди, то нашли нужный объект
-    //                 return {...item, rise: !item.rise} // то возращается развернутые элементы и изменным инкрис
-    //             }
-    //             return item; // если не совпало то возращаем объект
-    //         })
-    //     }))
-    // }
 
     onToggleProp = (id, prop) => {
         this.setState(({data}) => ({
